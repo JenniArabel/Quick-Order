@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #F28705;
+  margin: 0;
+}
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 768px;
+  height: auto;
+}
+.logo {
+  display: block;
+  margin: 0 auto 1rem auto;
+  max-width: 150px;
+}
+.login-container {
+  width: 350px;
+  text-align: center;
+}
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+.form-group,
+.role-select {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.form-group label,
+.role-select label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.form-group input,
+.role-select select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.login-btn {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.login-btn:hover {
+  background-color: #45a049;
+}
+.side-image img {
+  max-height: 350px;
+  border-radius: 12px;
+}

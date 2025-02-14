@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOZO</title>
+    <link rel="stylesheet" href="/src/main/resources/static/css/mozo.css" />
+  </head>
+
+  <body>
+    <div class="menu-bar">
+      <button onclick="showSection('order')">Tomar Pedido</button>
+      <button onclick="showSection('status'); showOrdersStatus();">Estado de Pedidos</button>
+      <button onclick="showSection('history')">Historial</button>
+    </div>
+
+    <div class="order-container section order active">
+      <h2>Tomar Pedido</h2>
+
+      <div class="product-item">
+        Pizza
+        <div class="quantity-controls">
+          <button onclick="changeQuantity('pizzaQty', -1)">-</button>
+          <span id="pizzaQty">0</span>
+          <button onclick="changeQuantity('pizzaQty', 1)">+</button>
+        </div>
+      </div>
+      
+      <div class="product-item">
+        Hamburguesa
+        <div class="quantity-controls">
+          <button onclick="changeQuantity('burgerQty', -1)">-</button>
+          <span id="burgerQty">0</span>
+          <button onclick="changeQuantity('burgerQty', 1)">+</button>
+        </div>
+      </div>
+
+      <div class="product-item">
+        Gaseosa
+        <div class="quantity-controls">
+          <button onclick="changeQuantity('sodaQty', -1)">-</button>
+          <span id="sodaQty">0</span>
+          <button onclick="changeQuantity('sodaQty', 1)">+</button>
+        </div>
+      </div>
+
+      <div class="product-item">
+        Jugo
+        <div class="quantity-controls">
+          <button onclick="changeQuantity('juiceQty', -1)">-</button>
+          <span id="juiceQty">0</span>
+          <button onclick="changeQuantity('juiceQty', 1)">+</button>
+        </div>
+      </div>
+
+      <textarea rows="3" placeholder="Añadir comentarios..."></textarea>
+     
+      <div class="submit-button">
+        <button onclick="showPopup()">Enviar a Cocina</button>
+      </div>
+    </div>
+
+    <div class="section status">
+      <h2>Estado de Pedidos</h2>
+      <div id="ordersStatus" class="order-status"></div>
+    </div>
+
+    <div class="section history">
+      <h2>Historial de Pedidos</h2>
+      <p>Pedidos anteriores del mozo.</p>
+    </div>
+
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+          <p>¿Desea enviar el pedido a cocina o modificarlo?</p>
+          <button class="modify-btn" onclick="closePopup()"> Modificar </button>
+          <button class="send-btn" onclick=""> Enviar </button>
+        </div>
+    </div>
+  </body>
+
+  <script src="/src/main/resources/static/js/mozo.js"></script>
+</html>

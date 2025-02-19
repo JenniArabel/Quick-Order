@@ -8,8 +8,9 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 1rem;
-  background-color: #333;
+  background-color: #222;
   color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 .menu-bar button {
   background-color: transparent;
@@ -17,6 +18,37 @@ body {
   color: white;
   font-size: 1rem;
   cursor: pointer;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.menu-bar button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #ffcc00;
+  transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+
+.menu-bar button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.menu-bar button.active-btn {
+  background-color: #ffcc00;
+  color: #222;
+  font-weight: bold;
+}
+
+.menu-bar button.active-btn::after {
+  width: 100%;
+  left: 0;
 }
 .section {
   display: none;
@@ -25,6 +57,10 @@ body {
 .section.active {
   display: block;
 }
+.logout-btn a{
+  color: white;
+  text-decoration: none;
+}
 
 /*PANTALLA TOMAR PEDIDOS*/
 .order-container {
@@ -32,7 +68,8 @@ body {
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  max-width: 700px;
+  height: fit-content;
   margin: 1rem auto;
 }
 h2 {
@@ -72,7 +109,7 @@ h2 {
 }
 textarea {
   width: 100%;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   border-radius: 8px;
   border: 1px solid #ccc;
   margin-top: 1rem;

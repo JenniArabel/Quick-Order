@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Gestión de Comandas</title>
+    <title> LogIn - Gestión de Comandas </title>
     <link rel="stylesheet" href="/src/main/resources/static/css/index.css" />
   </head>
   <body>
@@ -15,12 +15,14 @@
       <div class="login-container">
         <img src="/src/main/resources/static/images/QO-Logo.png" alt="Logo del software" class="logo"/>
 
-        <h2>Gestión de Comandas</h2>
+        <h2> Gestión de Comandas </h2>
 
         <form>
           <div class="role-select">
-            <label for="role"> Seleccionar rol: </label>
+            <label for="role"> Rol: </label>
+
             <select id="role" name="role" required>
+              <option value=""> Seleccione rol</option>
               <option value="mozo">Mozo</option>
               <option value="cocinero">Cocinero</option>
               <option value="caja">Caja</option>
@@ -28,28 +30,18 @@
           </div>
 
           <div class="form-group">
-            <label for="username">Usuario:</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Ingrese su usuario"
-              required
-            />
+            <label for="username"> Usuario: </label>
+
+            <input type="text" id="username" name="username" placeholder="Ingrese su usuario" required />
           </div>
 
           <div class="form-group">
             <label for="password">Contraseña:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Ingrese su contraseña"
-              required
-            />
+            
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required />
           </div>
           
-          <button type="submit" class="login-btn">Iniciar sesión</button>
+          <button type="submit" class="login-btn"> Iniciar sesión </button>
         </form>
       </div>
     </div>

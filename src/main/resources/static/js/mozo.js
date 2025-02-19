@@ -6,10 +6,23 @@ const orders = [
 ];
 
 function showSection(section) {
-  document
-    .querySelectorAll(".section")
-    .forEach((s) => s.classList.remove("active"));
-  document.querySelector(`.${section}`).classList.add("active");
+  // Ocultar todas las secciones
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelector(`.${section}`).classList.add('active');
+
+  // Quitar resaltado de todos los botones
+  document.querySelectorAll('.menu-bar button').forEach(btn => btn.classList.remove('active-btn'));
+
+  // Resaltar el botón correspondiente
+  const buttons = {
+    order: document.querySelector(".menu-bar button:nth-child(1)"),
+    status: document.querySelector(".menu-bar button:nth-child(2)"),
+    history: document.querySelector(".menu-bar button:nth-child(3)")
+  };
+
+  if (buttons[section]) {
+    buttons[section].classList.add("active-btn");
+  }
 }
 
 function showOrdersStatus() {

@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f28705;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+}
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 8px;
+}
+.order-container {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.order-number {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.order-items {
+  margin-bottom: 10px;
+}
+.order-total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.payment-section {
+  margin-top: 10px;
+}
+.payment-section input{
+    width: 64%;
+    margin: 5px 0;
+    padding: 5px;
+}
+.payment-section select {
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px;
+}
+.finalize-btn {
+  background: green;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.finalize-btn:hover {
+  background: darkgreen;
+}

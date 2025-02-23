@@ -11,6 +11,20 @@ h2 {
   padding: 15px;
   margin: 0;
 }
+.logout-btn {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background-color: white;
+  /* color: black; */
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.logout-btn img {
+  width: 26px;
+}
 .orders-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

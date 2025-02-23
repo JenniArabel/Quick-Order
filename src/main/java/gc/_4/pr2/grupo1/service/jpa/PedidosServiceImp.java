@@ -1,5 +1,6 @@
 package gc._4.pr2.grupo1.service.jpa;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +30,15 @@ public class PedidosServiceImp implements IPedidosService {
 	}
 
 	@Override
-	public Pedidos guardar(Pedidos pedidos) {
+	public Pedidos guardar(Pedidos pedido) {
+		Date hoy = new Date();
+		pedido.setFechaPedido(hoy);
 		
-		return repo.save(pedidos);
+		//Contar pedidos del día para asignar nro diario
+		int numeroDiario = repo.countByFechaPedido(hoy) + 1;
+		pedido.setNumeroDiario(numeroDiario);
+		
+		return repo.save(pedido);
 	}
 
 	@Override
@@ -49,5 +56,8 @@ public class PedidosServiceImp implements IPedidosService {
 		}
 	}
 	
-	
+	 @Override
+	    public List<Pedidos> obtenerPorEstado(String estado) {
+	        return repo.findByEstado(estado);
+	    }
 }

@@ -10,14 +10,15 @@ import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Factura {
-	
+	// ATRIBUTOS
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
 	private Long id; 
 	private String detalle;
 	private int total;
-	private String FechaYHora;
+	private String metodoDePago;
+	
+	// RELACIONES CON OTRAS ENTIDADES
 	@OneToOne
 	private Pedidos pedidos;
 	
@@ -25,6 +26,7 @@ public class Factura {
 	@JoinColumn(name = "empleado_id")
 	private Empleado empleado;
 		
+	// METODOS GETTERS Y SETTERS
 	public Long getId() {
 		return id;
 	}
@@ -43,11 +45,11 @@ public class Factura {
 	public void setTotal(int total) {
 		this.total = total;
 	}
-	public String getFechaYHora() {
-		return FechaYHora;
+	public String getMetodoDePago() {
+		return metodoDePago;
 	}
-	public void setFechaYHora(String fechaYHora) {
-		FechaYHora = fechaYHora;
+	public void setMetodoDePago(String metodoDePago) {
+		this.metodoDePago = metodoDePago;
 	}
 	public Empleado getEmpleado() {
 		return empleado;
@@ -55,8 +57,4 @@ public class Factura {
 	public void setEmpleado(Empleado empleado) {
 		this.empleado = empleado;
 	}
-	
-	
-	
 }
-

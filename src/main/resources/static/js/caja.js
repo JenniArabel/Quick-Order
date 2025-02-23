@@ -38,26 +38,13 @@ function renderOrders() {
 
             <div class="order-total"> Total: $${total.toFixed(2)} </div>
 
-            <div class="order-total"> Total con propina (15%): $${totalConPropina} </div>
-
             <div class="payment-section">
-                <label> ¿Incluir propina? </label>
-
-                <select onchange="updateTotal(this, ${total})">
-                    <option value="no"> No </option>
-                    <option value="si"> Sí </option>
-                </select>
-
                 <label> Método de pago: </label>
 
                 <select>
                     <option value="efectivo"> Efectivo </option>
                     <option value="tarjeta"> Tarjeta </option>
                 </select>
-
-                <label> Pago del cliente: </label>
-
-                <input type="number" placeholder="Ingrese cantidad">
 
                 <button class="finalize-btn" onclick="finalizarPedido(${pedido.numero})"> Finalizar Pago </button>
             </div>

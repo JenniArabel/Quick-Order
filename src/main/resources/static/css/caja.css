@@ -11,6 +11,19 @@ h2 {
   padding: 15px;
   margin: 0;
 }
+.logout-btn {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background-color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.logout-btn img {
+  width: 26px;
+}
 .orders-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -39,9 +52,9 @@ h2 {
   margin-top: 10px;
 }
 .payment-section input{
-    width: 64%;
-    margin: 5px 0;
-    padding: 5px;
+  width: 64%;
+  margin: 5px 0;
+  padding: 5px;
 }
 .payment-section select {
   width: 100%;
